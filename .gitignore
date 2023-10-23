@@ -4,3 +4,5 @@
 # User-specific stuff
 .idea/*
 *.su
+/Auction.Web/Auction.Web/obj
+/Auction.Web/.vs/Auction.Web
