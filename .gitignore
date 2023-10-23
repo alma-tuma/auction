@@ -6,3 +6,5 @@
 *.su
 /Auction.Web/Auction.Web/obj
 /Auction.Web/.vs/Auction.Web
+/Auction.Web/Auction.Entity/obj
+/Auction.Web/Auction.Infrastructure.EF/obj
