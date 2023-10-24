@@ -8,3 +8,6 @@
 /Auction.Web/.vs/Auction.Web
 /Auction.Web/Auction.Entity/obj
 /Auction.Web/Auction.Infrastructure.EF/obj
+/Auction.Web/.vs/ProjectEvaluation
+/Auction.Web/Auction.Entity/bin/Debug/net6.0
+/Auction.Web/Auction.Infrastructure.EF/bin/Debug/net6.0
