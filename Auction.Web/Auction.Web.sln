@@ -5,6 +5,10 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auction.Web", "Auction.Web\Auction.Web.csproj", "{768C9F58-FECE-4887-8CDD-6F50192DE2C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auction.Entity", "Auction.Entity\Auction.Entity.csproj", "{CD64AAF7-57F6-4EB2-9075-D953ADAB7657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auction.Infrastructure.EF", "Auction.Infrastructure.EF\Auction.Infrastructure.EF.csproj", "{51F6453C-0947-47BA-9113-C1042117415C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{768C9F58-FECE-4887-8CDD-6F50192DE2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{768C9F58-FECE-4887-8CDD-6F50192DE2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{768C9F58-FECE-4887-8CDD-6F50192DE2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD64AAF7-57F6-4EB2-9075-D953ADAB7657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD64AAF7-57F6-4EB2-9075-D953ADAB7657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD64AAF7-57F6-4EB2-9075-D953ADAB7657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD64AAF7-57F6-4EB2-9075-D953ADAB7657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51F6453C-0947-47BA-9113-C1042117415C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F6453C-0947-47BA-9113-C1042117415C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F6453C-0947-47BA-9113-C1042117415C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F6453C-0947-47BA-9113-C1042117415C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

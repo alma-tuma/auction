@@ -1,0 +1,29 @@
+﻿@model AuctionAddModel
+@{
+    ViewData["Title"] = "New Auction";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="display-4">New Auction</h1>
+
+            <form asp-controller="Auction" asp-action="Add" method="post">
+                <p>Product Name</p>
+                <input type="text" asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+                <p>Description</p>
+                <input type="text" asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+                <p>Starting Bit</p>
+                <input type="text" asp-for="StartingBid" class="form-control" />
+                <span asp-validation-for="StartingBid" class="text-danger"></span>
+                <p>End Date</p>
+                <input type="date" asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+                <br />
+                <input type="submit" class="btn btn-primary" value="Create Auction" />
+
+            </form>
+        </div>
+    </div>
+</div>

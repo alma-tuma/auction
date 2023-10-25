@@ -16,6 +16,9 @@ namespace Auction.Infrastructure.EF.Configurations
             builder.Property(x => x.IsActive).IsRequired();
 
             builder.HasOne(x => x.User).WithMany(x => x.Auctions).HasForeignKey(x => x.UserId).HasPrincipalKey(x => x.Id).OnDelete(DeleteBehavior.Restrict);
+
+            //gloabal query filter
+            builder.HasQueryFilter(x => x.IsActive);
         }
     }
 }

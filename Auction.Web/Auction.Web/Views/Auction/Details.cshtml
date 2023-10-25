@@ -1,0 +1,39 @@
+﻿@model AuctionDetailsModel
+@{
+    ViewData["Title"] = "Auction Details";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="display-4">@Model.ProducName <span style="font-size:12px;">Created By @Model.CreatedBy</span></h1>
+            <p>Time remainings @Model.TimeRemaining days</p>
+            <br />
+            <p>@Model.Description</p>
+        </div>
+    </div>
+</div>
+
+<form asp-controller="Auction" asp-action="Bid" method="post">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Current Highest Bid</p>
+                <p>$@Model.TopBid</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <p>
+                    @if (Model.TopBid > 0)
+                    {
+                        @Html.Raw("By "+Model.TopBidCreatedBy)
+                    }
+                </p>
+                <input type="hidden" name="AuctionId" value="@Model.Id" />
+                <br />
+                <input type="text" name="Amount" class="form-control" placeholder="Your bid goes here" />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <input type="submit" class="btn btn-primary" value="Bid" />
+            </div>
+        </div>
+    </div>
+</form>

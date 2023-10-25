@@ -18,8 +18,8 @@ namespace Auction.Entity
         public bool IsActive { get; set; }
         public string UserId { get; set; }
 
-        public ICollection<AuctionBid> AuctionBids { get; set; }
-        public ICollection<Transaction> Transactions { get; set; }
+        public List<AuctionBid> AuctionBids { get; set; } = new List<AuctionBid>();
+        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
         public virtual ApplicationUser User { get; set; }
     }
 }

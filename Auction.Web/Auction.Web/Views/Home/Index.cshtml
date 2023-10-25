@@ -1,8 +1,44 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model AuctionIndexModel
+@{
+    ViewData["Title"] = "Auction";
+    Layout = "_LayoutHome";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1 class="display-4">Current Auctions</h1>
+<table class="table">
+    <tr>
+        <th>Product</th>
+        <th>Seller</th>
+        <th>Top Bid</th>
+        <th>Time Remaining</th>
+        <th></th>
+    </tr>
+    @foreach (var auction in Model.Auctions)
+    {
+        <tr>
+            <td><a asp-controller="Auction" asp-action="Details" asp-route-id="@auction.Id">@auction.ProducName</a></td>
+            <td>@auction.Seller</td>
+            <td>@auction.TopBid</td>
+            <td>@auction.TimeRemaining</td>
+            <td>
+                @if (auction.IsMyAuction)
+                {
+                    <a asp-controller="Auction" asp-action="Delete" asp-route-id="@auction.Id">Delete</a>
+                }
+            </td>
+        </tr>
+
+    }
+</table>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <a asp-action="Add" asp-controller="Auction" class="btn btn-primary">New Auction</a>
+        </div>
+        <div class="col-md-6 text-right">
+            <p>Your Current Wallet: $@Model.BalanceString</p>
+        </div>
+    </div>
 </div>
+
+
